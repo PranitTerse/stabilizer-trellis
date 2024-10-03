@@ -1,14 +1,14 @@
 # stabilizer-trellis
 # Get Minimal trellis for a given stabilizer code
 
-A program to generate the trellis diagram of a given stabilizer code. Two methods of creating a trellis are included; the first based on the original work by Ollivier and Tillich [(arxiv.org/abs/quant-ph/0512041)](https://arxiv.org/abs/quant-ph/0512041), and the second method described by Sidorenko et al. [(ieeexplore.ieee.org/document/10461412)](https://ieeexplore.ieee.org/document/10461412) which is based on the BCJR-Wolf method for constructing trellis diagrams for classical codes.
+A program to generate the trellis diagram of a given stabilizer code. Two methods of creating a trellis are included; the first based on the work by Ollivier and Tillich [(arxiv.org/abs/quant-ph/0512041)](https://arxiv.org/abs/quant-ph/0512041), and the second method described by Sidorenko et al. [(ieeexplore.ieee.org/document/10461412)](https://ieeexplore.ieee.org/document/10461412) which is based on the BCJR-Wolf method for constructing trellis diagrams for classical codes.
 
 ## Package requirements
 The following packages are used:
 - numpy
 - networkx - Package for creating, modifying the trellis network 
 - matlpotlib - For visualization
-- itertools - Specifically the 'combinations' module
+- itertools
 
 ## Notes
 The methods are referred to as 'Ollivier method' and 'BCJR-Wolf method' respectively.
