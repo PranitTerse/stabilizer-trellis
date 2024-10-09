@@ -82,16 +82,15 @@ def get_stabilizer_set(generators):
     identity = ''
     for i in range(len(generators[0])):          
         identity += 'I'
-    stabilizers = [identity] + generators          
+    full_set = [identity] + generators          
 
     comb_lists = []
-    for i in range(1,r):                   ####### get combinations of stab generators
+    for i in range(1,len(generators)):                   ####### get combinations of stab generators
         comb = list(combinations(generators,i+1))
         comb_lists.append([pauliop(*pair) for pair in comb])
-    
-    for i in range(0,r-1):                 ###### add to list
-        stabilizers += comb_lists[i]
-    return stabilizers
+    for i in range(0,len(generators)-1):                 ###### add to list
+        full_set += comb_lists[i]
+    return full_set
 
 def syndrome(pauli):
     syndrome = ""
